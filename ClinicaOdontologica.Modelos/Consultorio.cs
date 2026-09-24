@@ -19,7 +19,6 @@ namespace ClinicaOdontologica.Modelos
         [Required]
         public int numeroSala { get; set; }
         
-        [Column("piso")]
         [Required]
         public int piso { get; set; }
         
