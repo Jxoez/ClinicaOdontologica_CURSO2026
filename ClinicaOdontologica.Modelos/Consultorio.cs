@@ -26,6 +26,8 @@ namespace ClinicaOdontologica.Modelos
         [Required]
         public string equipamientoPrincipal { get; set; }
 
+        // Relaciones
+        List<Cita>? Citas { get; set; } = new List<Cita>();
     }
 
 }

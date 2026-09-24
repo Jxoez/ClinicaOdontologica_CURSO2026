@@ -34,10 +34,10 @@ namespace ClinicaOdontologica.Modelos
         [Required]
         public string estadoPago { get; set; }
 
-        [ForeignKey("cita")]
+        [ForeignKey("Cita")]
         [Column("id_cita")]
         public int idCita { get; set; }
-        public Cita? cita { get; set; }
+        public Cita? Cita { get; set; }
 
     }
 }

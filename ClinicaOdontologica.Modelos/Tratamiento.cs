@@ -20,7 +20,7 @@ namespace ClinicaOdontologica.Modelos
         [Required]
         public string nombreTratamiento { get; set; }
 
-        [Column( "costo_base", TypeName = "numeric(10, 2)")]
+        [Column("costo_base", TypeName = "numeric(10, 2)")]
         [MaxLength(50)]
         [Required]
         public decimal costoBase { get; set; }
@@ -28,6 +28,9 @@ namespace ClinicaOdontologica.Modelos
         [Column("duracion_estimada_minutos", TypeName = "timestamp")]
         [Required]
         public TimeOnly duracionEstimadaMinutos { get; set; }
+
+        // Relaciones
+        List<DetalleCita>? DetallesCita { get; set; } = new List<DetalleCita>();
 
     }
 }
