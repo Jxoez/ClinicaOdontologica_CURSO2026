@@ -12,18 +12,18 @@ namespace ClinicaOdontologica.Modelos
     public class Odontologo
     {
         [Key]
-        [Column("id_odontologo", TypeName = "Serial")]
+        [Column("id_odontologo")]
         public int idOdontologo { get; set; }
 
-        [Column(TypeName = "varying(50)")]
+        [Column(TypeName = "varchar(50)")]
         [Required]
         public string nombres { get; set; }
 
-        [Column(TypeName = "varying(50)")]
+        [Column(TypeName = "varchar(50)")]
         [Required]
         public string apellidos { get; set; }
 
-        [Column("registro_medico", TypeName = "varying(20)")]
+        [Column("registro_medico", TypeName = "varchar(20)")]
         [Required]
         public string registroMedico { get; set; }
 

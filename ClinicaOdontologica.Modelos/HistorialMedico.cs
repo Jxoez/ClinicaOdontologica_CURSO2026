@@ -12,16 +12,16 @@ namespace ClinicaOdontologica.Modelos
     public class HistorialMedico
     {
         [Key]
-        [Column("id_historial", TypeName = "Serial")]
+        [Column("id_historial")]
         public int idHistorialMedico { get; set; }
         
-        [Column("alergias", TypeName = "varying(100)")]
+        [Column("alergias", TypeName = "varchar(100)")]
         public string alergias { get; set; }
 
-        [Column("enfermedades_previas", TypeName = "varying(100)")]
+        [Column("enfermedades_previas", TypeName = "varchar(100)")]
         public string enfermedadesPrevias { get; set; }
 
-        [Column("tipo_sangre", TypeName = "varying(10)")]
+        [Column("tipo_sangre", TypeName = "varchar(10)")]
         [Required]
         public string tipoSangre { get; set; }
 

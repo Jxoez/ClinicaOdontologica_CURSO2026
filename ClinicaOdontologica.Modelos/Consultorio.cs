@@ -12,17 +12,17 @@ namespace ClinicaOdontologica.Modelos
     public class Consultorio
     {
         [Key]
-        [Column("id_consultorio", TypeName = "Serial")]
+        [Column("id_consultorio")]
         public int idConsultorio { get; set; }
         
-        [Column("numero_sala", TypeName = "varying(10)")]
+        [Column("numero_sala", TypeName = "varchar(10)")]
         [Required]
         public int numeroSala { get; set; }
         
         [Required]
         public int piso { get; set; }
         
-        [Column("equipamiento_principal", TypeName = "varying(100)")]
+        [Column("equipamiento_principal", TypeName = "varchar(100)")]
         [Required]
         public string equipamientoPrincipal { get; set; }
 

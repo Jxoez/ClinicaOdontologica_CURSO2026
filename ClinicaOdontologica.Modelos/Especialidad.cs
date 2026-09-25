@@ -12,14 +12,14 @@ namespace ClinicaOdontologica.Modelos
     public class Especialidad
     {
         [Key]
-        [Column("id_especialidad", TypeName = "Serial")]
+        [Column("id_especialidad")]
         public int idEspecialidad { get; set; }
 
-        [Column("nombre_especialidad", TypeName = "varying(50)")]
+        [Column("nombre_especialidad", TypeName = "varchar(50)")]
         [Required]
         public string nombreEspecialidad { get; set; }
 
-        [Column("descripcion", TypeName = "varying(200)")]
+        [Column("descripcion", TypeName = "varchar(200)")]
         [Required]
         public string descripcion { get; set; }
 

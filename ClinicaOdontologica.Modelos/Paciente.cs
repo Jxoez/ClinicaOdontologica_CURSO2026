@@ -12,18 +12,18 @@ namespace ClinicaOdontologica.Modelos
     public class Paciente
     {
         [Key]
-        [Column("id_paciente", TypeName = "Serial")]
+        [Column("id_paciente")]
         public int idPaciente { get; set; }
         
-        [Column("dni", TypeName = "varying(10)")]
+        [Column("dni", TypeName = "varchar(10)")]
         [Required]
         public string dni { get; set; }
         
-        [Column("nombres", TypeName = "varying(50)")]
+        [Column("nombres", TypeName = "varchar(50)")]
         [Required]
         public string nombres { get; set; }
         
-        [Column("apellidos", TypeName = "varying(50)")]
+        [Column("apellidos", TypeName = "varchar(50)")]
         [Required]
         public string apellidos { get; set; }
         
@@ -31,11 +31,11 @@ namespace ClinicaOdontologica.Modelos
         [Required]
         public DateOnly fechaNacimiento { get; set; }
         
-        [Column("email", TypeName = "varying(100)")]
+        [Column("email", TypeName = "varchar(100)")]
         [Required]
         public string email { get; set; }
 
-        [Column("telefono", TypeName = "varying(15)")]
+        [Column("telefono", TypeName = "varchar(15)")]
         [Required]
         public string telefono { get; set; }
 

@@ -13,14 +13,14 @@ namespace ClinicaOdontologica.Modelos
     public class DetalleCita
     {
         [Key]
-        [Column("id_detalle_cita", TypeName = "Serial")]
+        [Column("id_detalle_cita")]
         public int idDetalleCita { get; set; }
 
         [Column("costo_aplicado", TypeName = "numeric(10, 2)")]
         [Required]
         public decimal costoAplicado { get; set; }
         
-        [Column(TypeName = "varying(200)")]
+        [Column(TypeName = "varchar(200)")]
         [Required]
         public string observaciones { get; set; }
 
@@ -30,6 +30,7 @@ namespace ClinicaOdontologica.Modelos
         
         [ForeignKey("Tratamiento")]
         [Column("id_tratamiento")]
+        [Required]
         public int idTratamiento { get; set; }
         
         // Objetos de navegacion 

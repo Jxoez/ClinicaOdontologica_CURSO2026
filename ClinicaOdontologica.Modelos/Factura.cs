@@ -12,7 +12,7 @@ namespace ClinicaOdontologica.Modelos
     public class Factura
     {
         [Key]
-        [Column("id_factura", TypeName = "Serial")]
+        [Column("id_factura")]
         public int idFactura { get; set; }
         
         [Column("fecha_emision", TypeName = "timestamp")]
@@ -30,7 +30,7 @@ namespace ClinicaOdontologica.Modelos
         [Required]
         public decimal total { get; set; }
         
-        [Column("estado_pago", TypeName = "varying(20)")]
+        [Column("estado_pago", TypeName = "varchar(20)")]
         [Required]
         public string estadoPago { get; set; }
 

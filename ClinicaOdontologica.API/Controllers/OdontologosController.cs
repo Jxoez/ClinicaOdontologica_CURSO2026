@@ -4,10 +4,10 @@ using ClinicaOdontologica.Modelos;
 
 [Route("api/[controller]")]
 [ApiController]
-public class OdontologoesController : ControllerBase
+public class OdontologosController : ControllerBase
 {
     private readonly ClinicaOdontologicaAPIContext _context;
-    public OdontologoesController(ClinicaOdontologicaAPIContext context)
+    public OdontologosController(ClinicaOdontologicaAPIContext context)
     {
         _context = context;
     }
