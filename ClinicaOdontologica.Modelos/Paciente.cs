@@ -40,7 +40,7 @@ namespace ClinicaOdontologica.Modelos
         public string telefono { get; set; }
 
         // Relaciones
-        List<Cita>? Citas { get; set; } = new List<Cita>();
+        public List<Cita>? Citas { get; set; } = new List<Cita>();
         public HistorialMedico? HistorialMedico { get; set; }
     }
 }
