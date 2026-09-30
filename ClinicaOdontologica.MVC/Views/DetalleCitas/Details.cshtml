@@ -24,9 +24,9 @@
             @Html.DisplayFor(model => model.observaciones)
         </dd>
     </dl>
-        <dt class = "col-sm-2">
+        <!--dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.idCita)
-        </dt>
+        </!dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.idCita)
         </dd>
@@ -36,20 +36,40 @@
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.idTratamiento)
+        </dd-->
+    </dl>
+        <dt class = "col-sm-2">
+            Cita
+        </dt>
+        <dd class = "col-sm-10">
+    @if (Model.Cita != null)
+    {
+        <p class="mb-1"><strong>Fecha:</strong> @Model.Cita.fechaCita</p>
+        <p class="mb-1"><strong>Motivo:</strong> @Model.Cita.motivo</p>
+        <p class="mb-1"><strong>Estado:</strong> @Model.Cita.estado</p>
+        <p class="mb-1"><strong>Paciente:</strong> @Model.Cita.Paciente?.nombres @Model.Cita.Paciente?.apellidos</p>
+        <p class="mb-1"><strong>Odontólogo:</strong> @Model.Cita.Odontologo?.nombres @Model.Cita.Odontologo?.apellidos</p>
+        <p class="mb-0"><strong>Consultorio:</strong> Sala @Model.Cita.Consultorio?.numeroSala</p>
+    }
+    else
+    {
+        <span>Sin cita asociada</span>
+    }
         </dd>
     </dl>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cita)
+            Tratamiento
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cita)
-        </dd>
-    </dl>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Tratamiento)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Tratamiento)
+    @if (Model.Tratamiento != null)
+    {
+        <p class="mb-1"><strong>Nombre:</strong> @Model.Tratamiento.nombreTratamiento</p>
+        <p class="mb-0"><strong>Descripción:</strong> @Model.Tratamiento.costoBase</p>
+    }
+    else
+    {
+        <span>Sin tratamiento asociado</span>
+    }
         </dd>
     </dl>
 </div>

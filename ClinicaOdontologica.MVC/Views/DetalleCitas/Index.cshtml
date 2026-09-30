@@ -19,16 +19,10 @@
                 @Html.DisplayNameFor(model => model.observaciones)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.idCita)
+               Cita
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.idTratamiento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cita)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Tratamiento)
+                Tratamiento
             </th>
             <th></th>
         </tr>
@@ -43,14 +37,9 @@
                 @Html.DisplayFor(model => item.observaciones)
             </td>
             <td>
-                @Html.DisplayFor(model => item.idCita)
+                @Html.DisplayFor(model => item.Cita.fechaCita)
             </td>
-            <td>
-                @Html.DisplayFor(model => item.idTratamiento)
-            </td>
-            <td>
-                @Html.DisplayFor(model => item.Cita)
-            </td>
+            
             <td>
                 @Html.DisplayFor(model => item.Tratamiento)
             </td>

@@ -22,7 +22,7 @@
                 @Html.DisplayNameFor(model => model.equipamientoPrincipal)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Citas)
+                Citas
             </th>
             <th></th>
         </tr>
@@ -40,7 +40,19 @@
                 @Html.DisplayFor(model => item.equipamientoPrincipal)
             </td>
             <td>
-                @Html.DisplayFor(model => item.Citas)
+                    @if (item.Citas != null && item.Citas.Any())
+                    {
+                        <ul>
+                            @foreach (var cita in item.Citas)
+                            {
+                                <li>@cita.fechaCita</li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <span>Sin citas</span>
+                    }
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.idConsultorio">Edit</a> |
